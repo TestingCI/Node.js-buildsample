@@ -2,9 +2,7 @@ node_js:
   - "0.11"
   - "0.10"
 
-branches:
-  only:
-    - Testing
+
     
   
 language: node_js
