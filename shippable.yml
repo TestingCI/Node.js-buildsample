@@ -4,10 +4,6 @@ node_js:
 branches:
   only:
     - develop
-    
-
-    
-  
 language: node_js
 addons:
   firefox: "21.0"
