@@ -6,5 +6,5 @@ after_script:
   - ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -u tdd 
   - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
 branches:
-  except:
+  only:
     - master
