@@ -1,13 +1,14 @@
 node_js:
    - "0.10"
 #include  
-#branches:
- # only:
-  #  - develop
-# exclude
 branches:
-  except:
-    - master
+  only:
+   - master   
+   - develop
+# exclude
+#branches:
+ # except:
+  #  - master
 language: node_js
 addons:
   firefox: "21.0"
