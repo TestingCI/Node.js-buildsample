@@ -6,12 +6,10 @@ language: node_js
 before_install:
   - firefox --version  
 before_script: mkdir -p shippable/codecoverage
-script:
-  - echo $name
+#script:
+ # - echo $name
 after_script: 
   - ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -u tdd 
   - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
 after_success :
   - git push git@heroku.com:testingci.git master
-env:
-    secure: biLeLJg2+z1e+rWqNOsgP9zn1C2AlZoo5PRY1sLSpi0pIEdXtCsQwGcFWJbHiINOFv/3TDsO1Dls2g0p4Z3Lq2nFpgp1eIF24ijiuVgNFfG9ciGdGY2myc10BtR2mgF+SZZEsDMU53BTLWSfNjxOirpZqAOJgo9sWJa7A8tMD+eiNFjCxPdV5icZtWCq9Qv0jywbigultiZKWQ5f0puGQkKL1Q0aP2UzXTIxgp0nVAwYh2ffqHoYSBi+vs1g6Gnnr28EA8J9/tBF20XWBeer9d9PZwB3XAXWrzZ3f3fDvheMubcHjgrEq+l57qtK2R59GkD9ffOiTkSDjpqUYfnIwg== 
