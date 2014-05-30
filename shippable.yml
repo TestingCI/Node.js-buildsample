@@ -1,7 +1,7 @@
 node_js:
    - "0.10"
-   - "0.8"
-   - "0.11"
+  # - "0.8"
+   #- "0.11"
 
 # exclude
 #branches:
@@ -22,4 +22,6 @@ after_script:
   - ./node_modules/.bin/istanbul report cobertura --dir  shippable/codecoverage/
 matrix:
  include: 
-  - node_js: 0.6
+  - node_js: 0.11
+after_success :
+  - git push git@heroku.com:testingci.git master
