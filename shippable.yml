@@ -14,8 +14,8 @@ addons:
     - google.com
     - asdf.com
   
-before_install:
-  - firefox --version  
+
+  
 before_script: mkdir -p shippable/codecoverage
 after_script: 
   - ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -u tdd 
